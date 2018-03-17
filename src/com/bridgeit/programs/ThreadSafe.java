@@ -1,38 +1,40 @@
+/******************************************************************************
+ *  Purpose: Thread Safe singleton design pattern
+
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   14-03-2018
+ *
+ ******************************************************************************/
 package com.bridgeit.programs;
 
 public class ThreadSafe {
 
-	public static void main(String[] args)
-	{
-		
-		ThreadS t=ThreadS.getInstance();
+	public static void main(String[] args) {
+
+		ThreadS t = ThreadS.getInstance();
 		System.out.println(t.hashCode());
-		ThreadS t1=ThreadS.getInstance();
+		ThreadS t1 = ThreadS.getInstance();
 		System.out.println(t1.hashCode());
-		ThreadS t3=ThreadS.getInstance();
+		ThreadS t3 = ThreadS.getInstance();
 		System.out.println(t3.hashCode());
 	}
 
 }
 
-class ThreadS
-{
-	
+class ThreadS {
+
 	private static ThreadS thread;
-	
-	private ThreadS()
-	{
+
+	private ThreadS() {
 		System.out.println("Thread Safe");
 	}
-	
-	public static synchronized ThreadS getInstance()
-	{
-		if(thread==null)
-		{
-			thread=new ThreadS();
+
+	public static synchronized ThreadS getInstance() {
+		if (thread == null) {
+			thread = new ThreadS();
 		}
 		return thread;
 	}
-	
-	
+
 }

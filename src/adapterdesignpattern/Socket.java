@@ -2,9 +2,8 @@ package adapterdesignpattern;
 
 public class Socket {
 
-	public Volt getVolt()
-	{
+	public Volt getVolt() {
 		return new Volt(120);
-		
+
 	}
 }

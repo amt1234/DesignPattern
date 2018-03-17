@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  Purpose: Facade design pattern
+
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   15-03-2018
+ *
+ ******************************************************************************/
 package facadedesignpattern;
 
 import com.bridgeit.utility.Utility;
@@ -6,34 +14,37 @@ public class Client {
 
 	public static void main(String[] args) {
 		Utility utility = new Utility();
-		Shopkeeper shopkeeper=new Shopkeeper();
-		while (true) 
-		{
-				System.out.println("---Mobile Shop---");
-				System.out.println("1.Iphone ");
-				System.out.println("2.Samsung ");
-				System.out.println("3.Blackberry ");
-				System.out.println("4. Exit ");
-				System.out.println("Enter your choice :");
-				int choice=utility.inputInteger();
-				System.out.println();
-				
-				switch(choice)
-				{
-				case 1: shopkeeper.iphoneSale();
+		Shopkeeper shopkeeper = new Shopkeeper();
+		while (true) {
+			System.out.println("---Mobile Shop---");
+			System.out.println("1.Iphone ");
+			System.out.println("2.Samsung ");
+			System.out.println("3.Blackberry ");
+			System.out.println("4. Exit ");
+			System.out.println("Enter your choice :");
+			int choice = utility.inputInteger();
+			System.out.println();
+
+			switch (choice) {
+			case 1:
+				shopkeeper.iphoneSale();
 				break;
-				
-				case 2: shopkeeper.samsungSale();
+
+			case 2:
+				shopkeeper.samsungSale();
 				break;
-				
-				case 3: shopkeeper.blacberrySale();
+
+			case 3:
+				shopkeeper.blacberrySale();
 				break;
-				case 4: System.exit(0);
+			case 4:
+				System.exit(0);
 				break;
-				default: System.out.println("Invalid choice");
-				}
+			default:
+				System.out.println("Invalid choice");
+			}
 		}
-		
+
 	}
 
 }

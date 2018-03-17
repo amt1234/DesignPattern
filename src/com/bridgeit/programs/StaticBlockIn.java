@@ -1,38 +1,41 @@
+/******************************************************************************
+ *  Purpose: Static block singleton design pattern
+
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   14-03-2018
+ *
+ ******************************************************************************/
 package com.bridgeit.programs;
 
 public class StaticBlockIn {
 
 	public static void main(String[] args) {
-		A2 a2=A2.getInstance();
+		A2 a2 = A2.getInstance();
 		System.out.println(a2.hashCode());
-		A2 a3=A2.getInstance();
+		A2 a3 = A2.getInstance();
 		System.out.println(a3.hashCode());
 	}
 
 }
 
-class A2
-{
+class A2 {
 	private static A2 instance;
-	private A2()
-	{
+
+	private A2() {
 		System.out.println("StaticBlockInitialization");
 	}
-	static
-	{
-		try
-		{
-			instance=new A2();
-		}
-		catch(Exception e)
-		{
+
+	static {
+		try {
+			instance = new A2();
+		} catch (Exception e) {
 			throw new RuntimeException("exception");
 		}
 	}
-	public static A2 getInstance()
-	{
+
+	public static A2 getInstance() {
 		return instance;
 	}
-	
-	
+
 }

@@ -1,16 +1,15 @@
 /******************************************************************************
- *  Purpose: Facade design pattern
+ *  Purpose: visitor design pattern
 
  *  @author  Poonam
  *  @version 1.0
  *  @since   15-03-2018
  *
  ******************************************************************************/
-package facadedesignpattern;
 
-public interface MobileShope {
+package visitorpattern;
 
-	public void modelNo();
+public interface ItemElement {
 
-	public void price();
+	public int accept(ShoppingCartVisitor visitor);
 }

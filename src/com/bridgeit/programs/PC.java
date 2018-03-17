@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  Purpose: Factory singleton design pattern
+
+ *  @author  Poonam
+ *  @version 1.0
+ *  @since   14-03-2018
+ *
+ ******************************************************************************/
 package com.bridgeit.programs;
 
 public class PC extends Computer
